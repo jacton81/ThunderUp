@@ -45,7 +45,7 @@ img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-
 
 /* Apply these base styles to all icons */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "casper-icons", "Open Sans", sans-serif;
+    font-family: "casper-icons", "Muli","Open Sans", sans-serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -110,7 +110,7 @@ html {
 body {
     height: 100vh;
     max-height: 100vh;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Muli','Open Sans', sans-serif;
     font-size: 1.8rem;
     line-height: 1.6em;
     color: #3A4145;
@@ -131,7 +131,9 @@ h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
     margin-top: 0;
-    font-family: 'Open Sans', sans-serif;
+    margin-bottom:5px;
+    font-family: 'Open Sans','Muli', sans-serif;
+	font-weight:900;
 }
 
 h1 {
@@ -165,7 +167,7 @@ h6 {
 }
 
 a {
-    color: #57A3E8;
+    color: #f05232;
     transition: color 0.3s ease;
     text-decoration: none;
 }
@@ -176,7 +178,7 @@ a:hover {
 
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
-    color: #22313F;
+    color: #1d305f;
 }
 
 
@@ -215,12 +217,21 @@ hr {
     padding: 0;
 }
 
+.sidebarhr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #efefef;
+    margin: 20px 0;
+    padding: 0;
+}
+
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0 1.6em -2.2em;
     padding: 0 0 0 1.6em;
-    border-left: #4a4a4a 0.4em solid;
+    border-left: #007DC3 0.4em solid;
 }
 
 blockquote p {
@@ -244,7 +255,7 @@ blockquote cite {
 blockquote cite a { font-weight: normal; }
 
 mark {
-    background-color: #fdffb6;
+    background-color: #FDBB30;
 }
 
 code, tt {
@@ -252,7 +263,7 @@ code, tt {
     font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', monospace, sans-serif;
     font-size: 0.85em;
     white-space: pre-wrap;
-    background: #22313F;
+    background: #007DC3 ;
     color: #f8f8f2;
     border-radius: 0.3em;
 }
@@ -267,7 +278,7 @@ pre {
     font-size: 0.9em;
     white-space: pre;
     overflow: auto;
-    background: #22313F;
+    background: #007DC3 ;
     color: #f8f8f2;
     border-radius: 0.3em;
 }
@@ -442,10 +453,10 @@ margin on the iframe, cause it breaks stuff. */
 
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
-    margin: 0 0 10px 0;
+    margin: 5px 0 10px 0;
     color: white;
     font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Muli','Open Sans', sans-serif;
     text-shadow: 0 1px 6px rgba(0,0,0,0.1);
     text-indent: 0px;
 }
@@ -456,11 +467,11 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .blog-description {
-    color: #BBC4C9;
-    font-size: 1.8rem;
+    color: #fbba2e;
+    font-size: 1.4rem;
     line-height: 1.3em;
     font-weight: 300;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Muli','Open Sans', sans-serif;
     text-shadow: 0 1px 3px rgba(0,0,0,0.15);
     text-indent: 0px;
 }
@@ -493,7 +504,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .post-title {
     margin:0;
-    color: #222;
+    color: #1d305f;
 }
 
 .post-title a {
@@ -513,7 +524,7 @@ margin on the iframe, cause it breaks stuff. */
 .post-meta {
     display: inline-block;
     margin: 8px 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Muli','Open Sans', sans-serif;
     font-size: 14px;
     line-height: 1.4em;
     color: #9EABB3;
@@ -585,7 +596,7 @@ margin on the iframe, cause it breaks stuff. */
     width: 320px;
     height: 100vh;
     z-index: 100;
-    background-color: #22313F;
+    background-color: #1d305f;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
     overflow-y: auto;
 }
@@ -616,7 +627,7 @@ main
     width: 100%;
     font-size: 0.8em;
     border: none;
-    border-radius: 12px;
+    border-radius: 6px;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
     padding-left: 10px;
@@ -671,12 +682,12 @@ main
     color: #BBB;
 }
 
-#sidebar-links
+.sidebar-links
 {
     text-overflow: ellipsis;
 }
 
-#sidebar-links ul
+.sidebar-links ul
 {
     color: #BBC4C9;
     font-size: 13px;
@@ -684,19 +695,19 @@ main
     padding: 0;
 }
 
-#sidebar-links i
+.sidebar-links i
 {
     width: 20px;
     font-size: 14px;
 }
 
-#sidebar-links a
+.sidebar-links a
 {
     color: #BBC4C9;
     text-decoration: none;
 }
 
-#sidebar-links a:hover
+.sidebar-links a:hover
 {
     color: white;
 }
@@ -1151,7 +1162,7 @@ main
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Muli","Open Sans", sans-serif;
     color: rgba(255,255,255,0.8);
     border: #E7EEF2 1px solid;
     border-radius: 4px;
@@ -1239,11 +1250,12 @@ main
 .pagination {
     position: relative;
     margin: 3rem 0px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Muli','Open Sans', sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
     max-width: inherit;
+	width:100%;
 }
 
 .pagination a {
@@ -1290,7 +1302,7 @@ main
     position: relative;
     margin-top: 2rem;
     max-width: inherit;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Muli','Open Sans', sans-serif;
     font-size: 1.3rem;
     line-height: 1.7em;
     color: #BBC4C9;

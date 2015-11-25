@@ -15,37 +15,73 @@
 
     {{#if @blog.logo}}<link rel="shortcut icon" href="{{@blog.logo}}">{{/if}}
 
-    {{! Styles'n'Scripts }}
+    {{! Styles'n'Scripts }}    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" type="text/css" href="{{asset "css/menu.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
 </head>
 
 <body class="{{body_class}}">
+    
+   <!--ADDED CODE-->
+ <nav class="navbar" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header navbar-default">
+
+                {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+                <h2 class="blog-title pull-left"><a href="{{@blog.url}}">{{@blog.title}}</a><i class="fa  fa-code 3x"></i></h2>                       
+                            
+                <button type="button" class="navbar-toggle navbar-menu pull-right" data-toggle="collapse" data-target="#navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <div class="mobile-search">
+                     <form id="mobile-search">
+                        <input id="search-field" placeholder="Search"/>
+                     </form>
+                </div>    
+            </div>
+
+            <!-- User menu to show on screens < 768px -->
+            <div class="collapse navbar-collapse navbar-default custom-menu" id="navbar-collapse-1">
+                <div class="sidebar-links">
+                    <ul id="navigation" class="nav navbar-nav client-nav navbar-right">
+                        {{navigation}}
+                    </ul>
+                    <ul id="sidebar-external">
+                        {{> sidebar-external}}
+                    </ul>
+                </div>
+            </div>            
+        </div>        
+    </nav>
+
+   <!--END ADDED CODE--> 
 
     <div id="sidebar" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
         <div id="sidebar-content" class="inner">
             {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-            <h2 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h2>
+            <h2 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a><i class="fa  fa-code 3x"></i></h2>
             <h3 class="blog-description">{{@blog.description}}</h3>
 
             <form id="search">
                 <input id="search-field" placeholder="Search"/>
             </form>
 
-            <div id="sidebar-links">
-                <ul id="subscription-links">
-                    <li><a target="_blank" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i>Subscribe via RSS</a></li>
-                    <!-- No support yet
-                    <li><a target="_blank" href=" "><i class="fa fa-envelope"></i>Subscribe via email<a></li>
-                    -->
-                </ul>
+            <div class="sidebar-links">                
                 <ul id="navigation">
                     {{navigation}}
                 </ul>
@@ -54,18 +90,18 @@
                 </ul>
             </div>
 
-            <footer class="site-footer">
-                <section class="copyright">{{> copyright}}</section>
+            <footer class="site-footer">                                                         
                 <section class="poweredby">
                     <i class="icon-ghost"></i><a href="https://ghost.org">Ghost</a> -
-                    <a href="https://github.com/dlecina/StayPuft">StayPuft theme</a>
+                    <a href="https://github.com/jacton81/ThunderUp">ThunderUp theme</a>
                 </section>
+                <section class="copyright">{{> copyright}}</section>                
             </footer>
         </div>
     </div>
 
     <main>
-        <div class="main-inner">
+        <div class="main-inner">           
             <section id="results"></section>
             {{{body}}}
         </div>
@@ -79,6 +115,7 @@
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/prism-loader.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
     <script>
         $("#search-field").ghostHunter({

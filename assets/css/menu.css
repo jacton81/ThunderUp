@@ -1,0 +1,56 @@
+@media only screen and (min-width : 768px) {
+    .navbar-collapse.custom-menu, .navbar{
+        display: none!important;
+    }    
+}
+
+@media only screen and (max-width : 768px) {
+    #sidebar {
+        display: none!important;
+    }    
+}
+
+
+/****NAV BAR******/
+.navbar-default{
+	background-color:#1d305f;
+	padding-top:10px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: #ddd;
+    /*margin-top: -1px;*/
+}
+
+.mobile-search {
+    padding-bottom: 10px;
+    width: 98%;
+    text-align: center;
+    margin: auto;
+}
+
+#mobile-search input{
+    width: 100%;
+    font-size: 0.8em;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+#mobile-search:before{
+    color: #9EABB3;
+    font-family: 'FontAwesome';
+    /*content: "\f002";*/
+    font-size: 14px;
+    margin-top: 1px;
+    right: 10px;
+    position: absolute;
+}

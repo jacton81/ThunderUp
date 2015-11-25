@@ -1,6 +1,6 @@
-# StayPuft
+# ThunderUp
 
-A fork of Casper, the default theme for [Ghost](https://github.com/tryghost/ghost/).
+A fork of StayPuft, which is a fork of Casper, the default theme for [Ghost](https://github.com/tryghost/ghost/).
 
 ## Features
 
@@ -10,26 +10,31 @@ A fork of Casper, the default theme for [Ghost](https://github.com/tryghost/ghos
 * Support for [Font Awesome](https://github.com/FortAwesome/Font-Awesome).
 * Basic support for [slidr.js](https://github.com/bchanx/slidr).
 * Syntax highlighting using [Prism](https://github.com/LeaVerou/prism/).
+* Bootstrap mobile menu
+
+## Change Log
+* Added "Muli" google font (11/24/2015)
+* Added additional social media icons (11/24/2015)
+* Adjusted color scheme (11/24/2015)
+* Added bootstrap mobile menu (11/24/2015)
+
+## Roadmap
+* Add featured post to sidebar when [Query helper is ready](https://github.com/TryGhost/Ghost/issues/4439)
 
 ## Demo
 
-This theme is being used in my [blog](http://davidlecina.com/).
+This theme is being used in my [blog](https://justinacton.com/).
 
-*  ["Welcome to Ghost" post](http://davidlecina.com/blog/welcome-to-ghost/).
+*  ["Welcome to Ghost" post](https://justinacton.com/welcome-to-ghost/).
 *  [Prism demo](http://davidlecina.com/blog/prism-demo/).
 
 ## Discussion
 
-* The appropriate place to report problems is the [Issues section](https://github.com/dlecina/StayPuft/issues).
-* To discuss other topics, please find an appropriate post in my blog's [Staypuft tag](http://davidlecina.com/blog/tag/staypuft/) and post a comment there.
+* The appropriate place to report problems is the [Issues section](https://github.com/jacton81/ThunderUp/issues).
 
 ## Ghost Version
 
-StayPuft tries to match Casper's version numbering system. That is, StayPuft version A.B.C should roughly have the same (or more) features as Casper version A.B.C. Features and bug fixes may be added between major versions, so the best way to stay updated is to clone and pull changes from the repo.
-
-**The current StayPuft version is 1.2.5, and is expected to work with Ghost 0.7.0.**
-
-If the current version of StayPuft is not compatible with the version of Ghost you're running, try looking for an older one in the [Releases section](https://github.com/dlecina/StayPuft/releases).
+**The current ThunderUp version is 1.0, and is expected to work with Ghost 0.7.1.**
 
 ## Installation
 
@@ -37,13 +42,13 @@ If the current version of StayPuft is not compatible with the version of Ghost y
 
 ```
 cd ghost/content/themes
-sudo git clone https://github.com/dlecina/StayPuft
+sudo git clone https://github.com/jacton81/ThunderUp
 ```
 
 * Copy all files in `partials` folder ending in `example` so they end in `hbs`:
 
 ```
-cd StayPuft/partials
+cd ThunderUp/partials
 cp disqus.hbs.example disqus.hbs
 cp copyright.hbs.example copyright.hbs
 cp sidebar-external.hbs.example sidebar-external.hbs
@@ -52,6 +57,8 @@ cp sidebar-external.hbs.example sidebar-external.hbs
 * Modify `partials/disqus.hbs` with your shortname.
 * Replace `partials/copyright.hbs` with your own disclaimer.
 * Modify `partials/sidebar-external.hbs` with your own external links.
+* Add favicon to the `assets` folder
+* Change the font awesome code used for the code icon next to site name.  Or simply remove that line of code from the `default.hbs` file (line 77)
 * Restart Ghost.
 * Select the theme in your Settings page.
 
@@ -59,6 +66,7 @@ cp sidebar-external.hbs.example sidebar-external.hbs
 
 Original Copyright (c) 2013-2015 Ghost Foundation - Released under The MIT License.  
 Modifications Copyright (c) 2014-2015 David Lecina Fuentes - Released under The MIT License.
+Modifications Copyright (c) 2015 Justin Acton - Released under The MIT License.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
