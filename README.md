@@ -1,4 +1,4 @@
-# ThunderUp
+# ThunderUp 
 
 A fork of StayPuft, which is a fork of Casper, the default theme for [Ghost](https://github.com/tryghost/ghost/).
 
