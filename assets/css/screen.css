@@ -263,7 +263,7 @@ code, tt {
     font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', monospace, sans-serif;
     font-size: 0.85em;
     white-space: pre-wrap;
-    background: #007DC3 ;
+    background: #404040 ;
     color: #f8f8f2;
     border-radius: 0.3em;
 }
@@ -278,7 +278,7 @@ pre {
     font-size: 0.9em;
     white-space: pre;
     overflow: auto;
-    background: #007DC3 ;
+    background: #404040 ;
     color: #f8f8f2;
     border-radius: 0.3em;
 }
@@ -1259,8 +1259,9 @@ main
 }
 
 .pagination a {
-    color: #9EABB3;
+    color: #fff;
     transition: all 0.2s ease;
+	background-color: #007DC3;
 }
 
 /* Push the previous/next links out to the left/right */
