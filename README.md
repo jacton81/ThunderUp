@@ -30,7 +30,7 @@ This theme is being used in my [blog](https://justinacton.com/).
 
 ## Discussion
 
-* The appropriate place to report problems is the [Issues section](https://github.com/jacton81/ThunderUp/issues).
+* The appropriate place to report problems is the [Issues section](https://github.com/justinacton/ThunderUp/issues).
 
 ## Ghost Version
 
@@ -42,7 +42,7 @@ This theme is being used in my [blog](https://justinacton.com/).
 
 ```
 cd ghost/content/themes
-sudo git clone https://github.com/jacton81/ThunderUp
+sudo git clone https://github.com/justinacton/ThunderUp
 ```
 
 * Copy all files in `partials` folder ending in `example` so they end in `hbs`:
